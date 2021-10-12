@@ -1,6 +1,8 @@
 <?php
 
 namespace app\models;
+use yii\behaviors\TimestampBehavior;
+use \yii\db\ActiveRecord;
 
 use Yii;
 
@@ -22,7 +24,7 @@ use Yii;
  * @property RequestApproval[] $requestApprovals
  * @property Request[] $requests
  */
-class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
+class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
 
      private static $users = [
@@ -80,6 +82,17 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         ];
     }
 
+public function behaviors() {
+    return [ [
+        'class' => TimestampBehavior::className(),
+        'attributes' => [
+        ActiveRecord::EVENT_BEFORE_INSERT => ['createdAt',
+        'updatedAt'],
+        ActiveRecord::EVENT_BEFORE_UPDATE => ['updatedAt'],
+    ],
+],
+];
+}
     /**
      * Gets query for [[ApprovalMappings]].
      *

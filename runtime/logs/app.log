@@ -37094,3 +37094,366 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1633985164.5686
     'REQUEST_TIME' => 1633985164
 ]
+2021-10-12 09:24:08 [::1][-][a9kflsf7ovebk06ic37e3fgson][error][Error] Error: Class "app\models\TimestampBehavior" not found in C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\User.php:85
+Stack trace:
+#0 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(734): app\models\User->behaviors()
+#1 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(604): yii\base\Component->ensureBehaviors()
+#2 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#3 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#4 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1215): yii\base\BaseObject->__construct()
+#5 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(121): yii\db\BaseActiveRecord::instantiate(Array)
+#6 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQuery.php(219): yii\db\ActiveQuery->createModels(Array)
+#7 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQuery.php(306): yii\db\ActiveQuery->populate(Array)
+#8 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\UserQuery.php(32): yii\db\ActiveQuery->one(NULL)
+#9 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): app\models\UserQuery->one()
+#10 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\User.php(171): yii\db\BaseActiveRecord::findOne(3)
+#11 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(700): app\models\User::findIdentity(3)
+#12 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#13 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#14 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#15 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#16 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#17 [internal function]: yii\base\BaseObject->__construct(Array)
+#18 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#19 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#20 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#21 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#22 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#23 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#24 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#25 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#26 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#27 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#28 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#29 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#30 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#31 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#32 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#33 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#34 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#35 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\web\index.php(12): yii\base\Application->__construct(Array)
+#36 {main}
+2021-10-12 09:24:06 [::1][-][a9kflsf7ovebk06ic37e3fgson][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'a9kflsf7ovebk06ic37e3fgson'
+    '_identity' => '814578874fbcda9190e5fd5ab7b7aca543292d28e9e31ef56fa75c68416b1714a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[3,null,2592000]\";}'
+    '_csrf' => 'a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__authKey' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '13045'
+    'SERVER_SOFTWARE' => 'PHP 8.0.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/Workflow/department'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web\\index.php'
+    'PATH_INFO' => '/Workflow/department'
+    'PHP_SELF' => '/index.php/Workflow/department'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"94\", \"Microsoft Edge\";v=\"94\", \";Not A Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/Workflow/request/view?id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=a9kflsf7ovebk06ic37e3fgson; _identity=814578874fbcda9190e5fd5ab7b7aca543292d28e9e31ef56fa75c68416b1714a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B3%2Cnull%2C2592000%5D%22%3B%7D; _csrf=a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1634023446.2227
+    'REQUEST_TIME' => 1634023446
+]
+2021-10-12 09:24:35 [::1][-][a9kflsf7ovebk06ic37e3fgson][error][Error] Error: Class "app\models\TimestampBehavior" not found in C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\User.php:85
+Stack trace:
+#0 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(734): app\models\User->behaviors()
+#1 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(604): yii\base\Component->ensureBehaviors()
+#2 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#3 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#4 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1215): yii\base\BaseObject->__construct()
+#5 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(121): yii\db\BaseActiveRecord::instantiate(Array)
+#6 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQuery.php(219): yii\db\ActiveQuery->createModels(Array)
+#7 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQuery.php(306): yii\db\ActiveQuery->populate(Array)
+#8 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\UserQuery.php(32): yii\db\ActiveQuery->one(NULL)
+#9 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): app\models\UserQuery->one()
+#10 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\User.php(171): yii\db\BaseActiveRecord::findOne(3)
+#11 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(700): app\models\User::findIdentity(3)
+#12 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#13 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#14 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#15 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#16 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#17 [internal function]: yii\base\BaseObject->__construct(Array)
+#18 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#19 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#20 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#21 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#22 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#23 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#24 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#25 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#26 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#27 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#28 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#29 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#30 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#31 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#32 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#33 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#34 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#35 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\web\index.php(12): yii\base\Application->__construct(Array)
+#36 {main}
+2021-10-12 09:24:35 [::1][-][a9kflsf7ovebk06ic37e3fgson][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'a9kflsf7ovebk06ic37e3fgson'
+    '_identity' => '814578874fbcda9190e5fd5ab7b7aca543292d28e9e31ef56fa75c68416b1714a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[3,null,2592000]\";}'
+    '_csrf' => 'a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__authKey' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '11105'
+    'SERVER_SOFTWARE' => 'PHP 8.0.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/Workflow/department'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web\\index.php'
+    'PATH_INFO' => '/Workflow/department'
+    'PHP_SELF' => '/index.php/Workflow/department'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"94\", \"Microsoft Edge\";v=\"94\", \";Not A Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/Workflow/request/view?id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=a9kflsf7ovebk06ic37e3fgson; _identity=814578874fbcda9190e5fd5ab7b7aca543292d28e9e31ef56fa75c68416b1714a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B3%2Cnull%2C2592000%5D%22%3B%7D; _csrf=a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1634023475.1436
+    'REQUEST_TIME' => 1634023475
+]
+2021-10-12 09:24:38 [::1][-][a9kflsf7ovebk06ic37e3fgson][error][Error] Error: Class "app\models\TimestampBehavior" not found in C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\User.php:85
+Stack trace:
+#0 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(734): app\models\User->behaviors()
+#1 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(604): yii\base\Component->ensureBehaviors()
+#2 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#3 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#4 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1215): yii\base\BaseObject->__construct()
+#5 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(121): yii\db\BaseActiveRecord::instantiate(Array)
+#6 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQuery.php(219): yii\db\ActiveQuery->createModels(Array)
+#7 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQuery.php(306): yii\db\ActiveQuery->populate(Array)
+#8 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\UserQuery.php(32): yii\db\ActiveQuery->one(NULL)
+#9 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): app\models\UserQuery->one()
+#10 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\User.php(171): yii\db\BaseActiveRecord::findOne(3)
+#11 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(700): app\models\User::findIdentity(3)
+#12 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#13 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#14 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#15 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#16 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#17 [internal function]: yii\base\BaseObject->__construct(Array)
+#18 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#19 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#20 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#21 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#22 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#23 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#24 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#25 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#26 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#27 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#28 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#29 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#30 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#31 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#32 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#33 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#34 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#35 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\web\index.php(12): yii\base\Application->__construct(Array)
+#36 {main}
+2021-10-12 09:24:38 [::1][-][a9kflsf7ovebk06ic37e3fgson][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'a9kflsf7ovebk06ic37e3fgson'
+    '_identity' => '814578874fbcda9190e5fd5ab7b7aca543292d28e9e31ef56fa75c68416b1714a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[3,null,2592000]\";}'
+    '_csrf' => 'a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__authKey' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '7372'
+    'SERVER_SOFTWARE' => 'PHP 8.0.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/Workflow/department'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web\\index.php'
+    'PATH_INFO' => '/Workflow/department'
+    'PHP_SELF' => '/index.php/Workflow/department'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"94\", \"Microsoft Edge\";v=\"94\", \";Not A Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/Workflow/request/view?id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=a9kflsf7ovebk06ic37e3fgson; _identity=814578874fbcda9190e5fd5ab7b7aca543292d28e9e31ef56fa75c68416b1714a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B3%2Cnull%2C2592000%5D%22%3B%7D; _csrf=a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1634023478.6079
+    'REQUEST_TIME' => 1634023478
+]
+2021-10-12 09:24:56 [::1][-][a9kflsf7ovebk06ic37e3fgson][error][Error] Error: Class "app\models\ActiveRecord" not found in C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\User.php:87
+Stack trace:
+#0 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(734): app\models\User->behaviors()
+#1 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(604): yii\base\Component->ensureBehaviors()
+#2 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#3 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#4 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1215): yii\base\BaseObject->__construct()
+#5 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQueryTrait.php(121): yii\db\BaseActiveRecord::instantiate(Array)
+#6 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQuery.php(219): yii\db\ActiveQuery->createModels(Array)
+#7 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\ActiveQuery.php(306): yii\db\ActiveQuery->populate(Array)
+#8 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\UserQuery.php(32): yii\db\ActiveQuery->one(NULL)
+#9 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): app\models\UserQuery->one()
+#10 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\User.php(171): yii\db\BaseActiveRecord::findOne(3)
+#11 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(700): app\models\User::findIdentity(3)
+#12 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#13 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#14 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#15 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#16 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#17 [internal function]: yii\base\BaseObject->__construct(Array)
+#18 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#19 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#20 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#21 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#22 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#23 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#24 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#25 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#26 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#27 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#28 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#29 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#30 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#31 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#32 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#33 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#34 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#35 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\web\index.php(12): yii\base\Application->__construct(Array)
+#36 {main}
+2021-10-12 09:24:56 [::1][-][a9kflsf7ovebk06ic37e3fgson][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'a9kflsf7ovebk06ic37e3fgson'
+    '_identity' => '814578874fbcda9190e5fd5ab7b7aca543292d28e9e31ef56fa75c68416b1714a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[3,null,2592000]\";}'
+    '_csrf' => 'a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__authKey' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '1507'
+    'SERVER_SOFTWARE' => 'PHP 8.0.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/Workflow/department'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web\\index.php'
+    'PATH_INFO' => '/Workflow/department'
+    'PHP_SELF' => '/index.php/Workflow/department'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"94\", \"Microsoft Edge\";v=\"94\", \";Not A Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/Workflow/request/view?id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=a9kflsf7ovebk06ic37e3fgson; _identity=814578874fbcda9190e5fd5ab7b7aca543292d28e9e31ef56fa75c68416b1714a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B3%2Cnull%2C2592000%5D%22%3B%7D; _csrf=a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1634023496.0152
+    'REQUEST_TIME' => 1634023496
+]

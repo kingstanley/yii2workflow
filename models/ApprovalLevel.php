@@ -4,6 +4,8 @@ namespace app\models;
 
 use Yii;
 
+use yii\behaviors\TimestampBehavior;
+use \yii\db\ActiveRecord;
 /**
  * This is the model class for table "approval_level".
  *
@@ -17,7 +19,7 @@ use Yii;
  * @property ApprovalMapping[] $approvalMappings
  * @property RequestApproval[] $requestApprovals
  */
-class ApprovalLevel extends \yii\db\ActiveRecord
+class ApprovalLevel extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -53,6 +55,17 @@ class ApprovalLevel extends \yii\db\ActiveRecord
         ];
     }
 
+    public function behaviors() {
+    return [ [
+        'class' => TimestampBehavior::className(),
+        'attributes' => [
+        ActiveRecord::EVENT_BEFORE_INSERT => ['createdAt',
+        'updatedAt'],
+        ActiveRecord::EVENT_BEFORE_UPDATE => ['updatedAt'],
+    ],
+],
+];
+}
     /**
      * Gets query for [[ApprovalMappings]].
      *

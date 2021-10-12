@@ -2,6 +2,8 @@
 
 namespace app\models;
 
+use yii\behaviors\TimestampBehavior;
+use \yii\db\ActiveRecord;
 use Yii; 
 
 /**
@@ -22,7 +24,7 @@ use Yii;
  * @property RequestApproval[] $requestApprovals
  * @property User $requestor0
  */
-class Request extends \yii\db\ActiveRecord
+class Request extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -65,7 +67,17 @@ class Request extends \yii\db\ActiveRecord
         ];
     }
 
-
+public function behaviors() {
+    return [ [
+        'class' => TimestampBehavior::className(),
+        'attributes' => [
+        ActiveRecord::EVENT_BEFORE_INSERT => ['createdAt',
+        'updatedAt'],
+        ActiveRecord::EVENT_BEFORE_UPDATE => ['updatedAt'],
+    ],
+],
+];
+}
 
     /**
      * Gets query for [[Department]].
