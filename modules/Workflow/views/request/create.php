@@ -55,7 +55,7 @@ formArray.map(function(item, index) {
     
     $.ajax({
   type: 'POST',
-  url: '/restapi/request/create',
+  url: '/restapi/request/save',
   data: formJson,
   success: function(result){
      console.log('result: ',result);
