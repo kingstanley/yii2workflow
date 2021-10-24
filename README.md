@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ 
 # yii2workflow
 =======
 Yii2 Workflow App
