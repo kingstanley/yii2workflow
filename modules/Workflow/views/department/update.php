@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = 'Update';
 <?php 
 $script = <<< JS
 
-$('#department').on('beforeSubmit', function(e){
+$('form#{$model->formName()}').on('beforeSubmit', function(e){
     let \$form = $(this);
     let formArray =  \$form.serializeArray();
     // console.log('jquery json: ',formArray);

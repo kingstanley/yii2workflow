@@ -29,7 +29,7 @@ use yii\widgets\ActiveForm;
 <div class="department-form">
 
 <?php yii\widgets\Pjax::begin() ?>
-<?php $form = ActiveForm::begin(['options' =>  [ 'data-pjax' => true,'id' => 'department']]); ?>
+<?php $form = ActiveForm::begin(['options' =>  [ 'data-pjax' => true,'id' => $model->formName()]]); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => 200,'id'=>'name']) ?>
 
