@@ -39879,3 +39879,158 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1634044110.1478
     'REQUEST_TIME' => 1634044110
 ]
+2021-10-13 10:55:06 [::1][-][salu2u1h1mdvk9pnro6d75d1vc][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not an approval person in C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\models\search\RequestSearch.php:89
+Stack trace:
+#0 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\modules\Workflow\controllers\ApprovalController.php(45): app\models\search\RequestSearch->tobeApproved(Array)
+#1 [internal function]: app\modules\Workflow\controllers\ApprovalController->actionIndex()
+#2 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('index', Array)
+#5 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('Workflow/approv...', Array)
+#6 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Users\USER\Downloads\yii2workflow-master\yii2workflow-master\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2021-10-13 10:55:05 [::1][-][salu2u1h1mdvk9pnro6d75d1vc][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk\";}'
+    'PHPSESSID' => 'salu2u1h1mdvk9pnro6d75d1vc'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '1250'
+    'SERVER_SOFTWARE' => 'PHP 8.0.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/Workflow/approval/index'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web\\index.php'
+    'PATH_INFO' => '/Workflow/approval/index'
+    'PHP_SELF' => '/index.php/Workflow/approval/index'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"94\", \"Microsoft Edge\";v=\"94\", \";Not A Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/Workflow/user/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=a1ab135019137363a167977ae1144232ad288dd9f9c24f687794d023cf113aeaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22yFBV8CuZ9uxigzrgtc3svRhfxG4wecTk%22%3B%7D; PHPSESSID=salu2u1h1mdvk9pnro6d75d1vc'
+    'REQUEST_TIME_FLOAT' => 1634115305.7303
+    'REQUEST_TIME' => 1634115305
+]
+2021-10-14 22:13:28 [::1][-][-][warning][yii\web\User::getIdentityAndDurationFromCookie] Invalid cookie auth key attempted for user '9' from ::1: 
+2021-10-14 22:13:26 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1prcdag3251n75025jv2090nsu'
+    '_identity' => 'a0ad70f9a481d3ce39744e8faeaaaef9f870e4fcf311a9b51b4c216e8098f546a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[9,null,2592000]\";}'
+    '_csrf' => '656c70d46cca70aef46d8e799c46d8aba44ca7d6b2b48eb6e454674358b48653a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qkx2t-Omwg-XUNelMYTAsBEtkhcjkLCR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '5646'
+    'SERVER_SOFTWARE' => 'PHP 8.0.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/restapi/department'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web\\index.php'
+    'PATH_INFO' => '/restapi/department'
+    'PHP_SELF' => '/index.php/restapi/department'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"94\", \"Microsoft Edge\";v=\"94\", \";Not A Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36 Edg/94.0.992.47'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=1prcdag3251n75025jv2090nsu; _identity=a0ad70f9a481d3ce39744e8faeaaaef9f870e4fcf311a9b51b4c216e8098f546a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B9%2Cnull%2C2592000%5D%22%3B%7D; _csrf=656c70d46cca70aef46d8e799c46d8aba44ca7d6b2b48eb6e454674358b48653a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qkx2t-Omwg-XUNelMYTAsBEtkhcjkLCR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1634242406.3256
+    'REQUEST_TIME' => 1634242406
+]
+2021-10-19 08:54:21 [::1][-][-][warning][yii\web\User::getIdentityAndDurationFromCookie] Invalid cookie auth key attempted for user '9' from ::1: 
+2021-10-19 08:54:19 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'a0ad70f9a481d3ce39744e8faeaaaef9f870e4fcf311a9b51b4c216e8098f546a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[9,null,2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '12650'
+    'SERVER_SOFTWARE' => 'PHP 8.0.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/Workflow/department'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\USER\\Downloads\\yii2workflow-master\\yii2workflow-master\\web\\index.php'
+    'PATH_INFO' => '/Workflow/department'
+    'PHP_SELF' => '/index.php/Workflow/department'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"94\", \"Microsoft Edge\";v=\"94\", \";Not A Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36 Edg/94.0.992.47'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity=a0ad70f9a481d3ce39744e8faeaaaef9f870e4fcf311a9b51b4c216e8098f546a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B9%2Cnull%2C2592000%5D%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1634626459.6508
+    'REQUEST_TIME' => 1634626459
+]

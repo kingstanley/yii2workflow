@@ -25,31 +25,9 @@ $script = <<< JS
 
 $('form#{$model->formName()}').on('beforeSubmit', function(e){
     let \$form = $(this);
-    let formArray =  \$form.serializeArray();
-    // console.log('jquery json: ',$.parseJSON(formArray));
-   let formJson = {};
-formArray.map(function(item, index) {
-    console.log('index: ',index);
-    if(index !=0){
-        if ( formJson[item.name] ) {
-        if ( typeof(formJson[item.name]) === "string" ) {
-            
-            formJson[item.name] = [formJson[item.name]];
-        }
-        formJson[item.name].push(item.value);
-    } else {
-        let key = item.name.split('[')[1];
-
-        if(key){
-            key = key.split('');
-            key = key.splice(0, key.length -1)
-            key = key.join('');
-        }
-            console.log("Key: ",key);
-        formJson[key] = item.value;
-    }
-    }
-});
+    let formArray =  \$form.serializeArray(); 
+   const formJson = getFormAsJson(formArray);
+ 
 $.ajax({
   url: "/restapi/level/update?id=$model->id",
   type: "PUT",

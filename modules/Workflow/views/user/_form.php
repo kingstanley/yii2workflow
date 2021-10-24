@@ -50,32 +50,9 @@ $script = <<< JS
      console.log('Event: ',e);
  let \$form = $(this);
     let formArray =  \$form.serializeArray();
-console.log("formArray: ", formArray);
+// console.log("formArray: ", formArray);
 
- let userFormJson = {};
-formArray.map(function(item, index) {
-    console.log('index: ',index);
-    if(index !=0){
-        if ( userFormJson[item.name] ) {
-        if ( typeof(userFormJson[item.name]) === "string" ) {
-            
-            userFormJson[item.name] = [userFormJson[item.name]];
-        }
-        userFormJson[item.name].push(item.value);
-    } else {
-        let key = item.name.split('[')[1];
-
-        if(key){
-            key = key.split('');
-            key = key.splice(0, key.length -1)
-            key = key.join('');
-        }
-            console.log("Key: ",key);
-        userFormJson[key] = item.value;
-    }
-    }
-});
-    console.log("Registed JS on form: ",userFormJson);
+ const userFormJson = getFormAsJson(formArray)
    
      $.post(
         "/restapi/user/create",

@@ -8,6 +8,7 @@ use \app\models\User;
 class UserController extends \yii\rest\ActiveController
 {
     public $modelClass = '\app\models\user';
+    
 
     public function actionDepartment($id){
         $user = User::findOne($id);

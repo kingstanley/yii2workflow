@@ -27,36 +27,14 @@ $('form#{$model->formName()}').on('beforeSubmit', function(e){
     let \$form = $(this);
     let formArray =  \$form.serializeArray();
     // console.log('jquery json: ',$.parseJSON(formArray));
-   let formJson = {};
-formArray.map(function(item, index) {
-    console.log('index: ',index);
-    if(index !=0){
-        if ( formJson[item.name] ) {
-        if ( typeof(formJson[item.name]) === "string" ) {
-            
-            formJson[item.name] = [formJson[item.name]];
-        }
-        formJson[item.name].push(item.value);
-    } else {
-        let key = item.name.split('[')[1];
+   let formJson = getFormAsJson(formArray);
 
-        if(key){
-            key = key.split('');
-            key = key.splice(0, key.length -1)
-            key = key.join('');
-        }
-            console.log("Key: ",key);
-        formJson[key] = item.value;
-    }
-    }
-});
-    console.log("Registed JS on form: ",$model->id);
+    // console.log("Registed JS on form: ",$model->id);
    
     $.post(
         "/restapi/level/create",
       formJson
     ).done(function(result){
-        
         if(result){
             console.log("Create Result: ",result)
          $(\$form).trigger('reset');

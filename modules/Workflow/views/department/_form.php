@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <!-- <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'name')->textInput(['maxlength' => true,'id'=>'name']) ?>
 
     <?= $form->field($model, 'createdAt')->textInput() ?>
 
@@ -29,9 +29,9 @@ use yii\widgets\ActiveForm;
 <div class="department-form">
 
 <?php yii\widgets\Pjax::begin() ?>
-<?php $form = ActiveForm::begin(['options' =>  [ 'data-pjax' => true,'id' => $model->formName() ]]); ?>
+<?php $form = ActiveForm::begin(['options' =>  [ 'data-pjax' => true,'id' => 'department']]); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 200]) ?>
+    <?= $form->field($model, 'name')->textInput(['maxlength' => 200,'id'=>'name']) ?>
 
     <!-- <?= $form->field($model, 'createdAt')->textInput() ?>
 
